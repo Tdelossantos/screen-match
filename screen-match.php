@@ -49,7 +49,7 @@ echo "O gênero do filme é: $genero\n";
 
 $filme = [
     "nome" => "Thor: Ragnarok",
-    "ano" => 2021,
+    "ano" => 2022,
     "nota" => 7.8,
     "genero" => "super-herói",
 ];
