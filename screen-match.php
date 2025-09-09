@@ -19,7 +19,7 @@ $planoPrime = true;
 
 $incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
 
-echo "Nome do filme: " . $nomeFilme . "\n";
+echo "Nome do filme: $nomeFilme\n";
 echo "Nota do filme: $notaFilme\n";
 echo "Ano de lançamento: $anoLancamento\n";
 
@@ -56,3 +56,11 @@ var_dump($filme["nome"]);
 $posicaoDoisPontos = strpos($filme["nome"], ":");
 var_dump($posicaoDoisPontos);
 var_dump(substr($filme["nome"], 0, $posicaoDoisPontos));
+
+/*manipulando json
+echo json_encode($filme);
+var_dump(json_decode('{"nome":"Thor: Ragnarok","ano":2022,"nota":7.8,"genero":"super-her\u00f3i"}', true));
+*/
+
+$filmeComoStringJson = json_encode($filme);
+file_put_contents(__DIR__ . "/filme.json", $filmeComoStringJson);
