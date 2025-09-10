@@ -5,7 +5,7 @@ echo "Bem-vindo(a) ao screen match!\n";
 
 $nomeFilme = "Top Gun - Maverick";
 
-$anoLancamento = 2021;
+$anoLancamento = 2022;
 
 $quantidadeDeNotas = $argc - 1;
 $notas = [];
@@ -18,6 +18,7 @@ $notaFilme = array_sum($notas) / $quantidadeDeNotas;
 $planoPrime = true;
 
 $incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
+echo $incluidoNoPlano;
 
 echo "Nome do filme: $nomeFilme\n";
 echo "Nota do filme: $notaFilme\n";
@@ -34,7 +35,7 @@ $genero = match ($nomeFilme){
 
 echo "O gênero do filme é: $genero\n";
 
-$filme = criaFilme(nome:"Thor: Ragnarok", ano:2022, nota:7.8, genero:"super-herói");
+$filme = criaFilme(nome:"Thor: Ranarok", ano:2022, nota:7.8, genero:"super-herói");
 
 echo $filme["ano"];
 
