@@ -1,5 +1,4 @@
 <?php
-
 $filme = [
     'nome' => $_POST['nome'],
     'ano' => $_POST['ano'],

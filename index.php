@@ -1,5 +1,6 @@
 <?php
 require __DIR__."/src/funcoes.php";
+require __DIR__."/src/Modelo/Filme.php";
 
 echo "Bem-vindo(a) ao screen match!\n";
 
@@ -37,7 +38,7 @@ echo "O gênero do filme é: $genero\n";
 
 $filme = criaFilme(nome:"Thor: Ranarok", ano:2022, nota:7.8, genero:"super-herói");
 
-echo $filme["ano"];
+echo $filme->anoLancamento;
 
 /*manipulando arrays
 var_dump($notas);
@@ -47,10 +48,10 @@ $menorNota = min($notas);
 echo "$menorNota";
 
 manipulando strings
-var_dump($filme["nome"]);
-$posicaoDoisPontos = strpos($filme["nome"], ":");
+var_dump($filme->nome);
+$posicaoDoisPontos = strpos($filme->nome, ":");
 var_dump($posicaoDoisPontos);
-var_dump(substr($filme["nome"], 0, $posicaoDoisPontos));
+var_dump(substr($filme->nome, 0, $posicaoDoisPontos));
 
 manipulando json
 echo json_encode($filme);
